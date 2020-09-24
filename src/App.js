@@ -1,23 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./Logo1.png";
+import Users from "./Users";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        חיפוש משתמש:
+        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+        <Users />
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <p>Danit's Website ♡</p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/Danit-Shagan"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Danit's GitHub
         </a>
+        <Button variant="contained">Default</Button>
+        <Button variant="contained" color="primary">
+          Primary
+        </Button>
+        <Button variant="contained" color="secondary">
+          Secondary
+        </Button>
+        <Button variant="contained" disabled>
+          Disabled
+        </Button>
+        <Button variant="contained" color="primary" href="#contained-buttons">
+          Link
+        </Button>
+        type="button"
       </header>
     </div>
   );

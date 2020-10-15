@@ -26,14 +26,7 @@ function App() {
         >
           Danit's GitHub
         </a>
-        <Button variant="contained">Default</Button>
-        <Button variant="contained" color="primary">
-          Primary
-        </Button>
-        <Button variant="contained" color="secondary">
-          Secondary
-        </Button>
-        type="button"
+       
       </header>
     </div>
   );

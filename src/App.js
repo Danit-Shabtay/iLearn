@@ -4,12 +4,16 @@ import Users from "./Users";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import "./App.css";
+import SearchAppBar from "./SearchAppBar";
 
 function App() {
   return (
     <div className="App">
+      <SearchAppBar>
+
+      </SearchAppBar>
       <header className="App-header">
-        חיפוש משתמש:
+        :חיפוש משתמש
         <TextField id="outlined-basic" label="Outlined" variant="outlined" />
         <Users />
         <img src={logo} className="App-logo" alt="logo" />
@@ -29,16 +33,12 @@ function App() {
         <Button variant="contained" color="secondary">
           Secondary
         </Button>
-        <Button variant="contained" disabled>
-          Disabled
-        </Button>
-        <Button variant="contained" color="primary" href="#contained-buttons">
-          Link
-        </Button>
         type="button"
       </header>
     </div>
   );
 }
+
+
 
 export default App;

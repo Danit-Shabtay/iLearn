@@ -1,33 +1,30 @@
 import React from "react";
-import logo from "./Logo1.png";
-import Users from "./Users";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
+import UserDetails from "./UserDetails";
+import Home from "./Home";
 import "./App.css";
 import SearchAppBar from "./SearchAppBar";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
 
 function App() {
-  return (
-    <div className="App">
-      <SearchAppBar>
 
-      </SearchAppBar>
-      <header className="App-header">
-        :חיפוש משתמש
-        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-        <Users />
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Danit's Website ♡</p>
-        <a
-          className="App-link"
-          href="https://github.com/Danit-Shagan"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Danit's GitHub
-        </a>
-       
-      </header>
+  return (
+    <div>
+    <SearchAppBar/>
+    <Router>
+      <Switch>
+        <Route path="/UserDetails">
+          <UserDetails />
+        </Route>
+        <Route path="/">
+          <Home/>
+        </Route>
+      </Switch>
+    </Router>
     </div>
   );
 }

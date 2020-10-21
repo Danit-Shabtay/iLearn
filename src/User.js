@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 
 export default function User(props) {
   return (
@@ -10,9 +11,12 @@ export default function User(props) {
       Email: {props.email} <br />
       Phone: {props.phone} <br />
       Website: {props.website} <br />
-      <Button variant="contained" color="primary" href="#contained-buttons">
-        Link
-      </Button>
+      <Link to="/UserDetails">
+        <Button variant="contained" color="primary" href="#contained-buttons">
+          Link
+        </Button>
+      </Link>
+
     </p>
   );
 }
